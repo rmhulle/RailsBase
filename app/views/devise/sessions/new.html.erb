@@ -1,0 +1,72 @@
+
+
+<%= render "devise/shared/links" %>
+
+
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="font-bold">Bem vindo ao PGASS Web</h2>
+
+                <p>
+                    Esse aplicativo foi feito com objetivo de manter, de forma continua, a governança sobre as ofertas de Saúde do Espírito Santo.
+                </p>
+
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </p>
+
+                <p>
+                    <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</small>
+                </p>
+
+            </div>
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :class => "m-t" ) do |f| %>
+
+                        <div class="form-group">
+                            <%= f.email_field :email, placeholder: "Digite aqui seu email", class: 'form-control', autofocus: true %>
+                        </div>
+                        <div class="form-group">
+                            <%= f.password_field :password, placeholder: "Digite aqui sua senha",class: 'form-control', autocomplete: "off" %>
+                        </div>
+                        <%= f.submit 'Log in', class: 'btn btn-primary block full-width m-b'%>
+                    <% end %>
+                        
+                        <%= link_to new_password_path(resource_name) do %>
+                            <small>Esqueceu sua senha?</small>
+                        <% end %>    
+                        
+
+                        <p class="text-muted text-center">
+                            <small>Ainda não é registrado?</small>
+                        </p>
+                        <%= link_to new_registration_path(resource_name) do %>
+                        <a class="btn btn-sm btn-white btn-block" href="register.html">Registrar usuário</a>
+                        <% end %>
+                    <p class="m-t">
+                        <small>Aqui vai um tecto pequeno qualquer</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <hr />
+
+        <div class="row">
+            <div class="col-md-6">
+                Copyright Secretaria de Saúde Espírito Santo
+            </div>
+            <div class="col-md-6 text-right">
+                <small>© 2016</small>
+            </div>
+        </div>
+    </div>
+
+
